@@ -2,11 +2,12 @@
 'use strict';
 
 var fs = require('fs');
+var cordovaCommon = require('cordova-common');
 
 module.exports = function(context) {
 
 	var cordova_util = context.requireCordovaModule('cordova-lib/src/cordova/util'),
-	ConfigParser = context.requireCordovaModule('cordova-lib/src/configparser/ConfigParser'),
+	ConfigParser = cordovaCommon.ConfigParser;,
 	projectRoot = cordova_util.isCordova(),
 	xml = cordova_util.projectConfig(projectRoot),
 	cfg = new ConfigParser(xml),
