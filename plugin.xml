@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-        id="cordova-plugin-kunder-accountmanager" version="1.0.0">
+        id="cordova-plugin-cf-accountmanager" version="1.0.0">
     <name>AccountManagerPlugin</name>
     <description>Account Manager cordova plugin for android and keychain for iOS</description>
     <license>Apache 2.0</license>
@@ -12,9 +12,11 @@
 
     <platform name="android">
         <config-file target="AndroidManifest.xml" parent="/*">
-            <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS"></uses-permission>
-            <uses-permission android:name="android.permission.GET_ACCOUNTS"></uses-permission>
             <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+            <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+            <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+            <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+            <uses-permission android:name="android.permission.ACCOUNT_MANAGER" />
         </config-file>
 
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
