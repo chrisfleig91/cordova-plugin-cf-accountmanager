@@ -9,9 +9,7 @@
       "ios"
     ]
   },
-  "dependencies": {
-    "cordova-common": "2.2.1" 
-  },
+  "dependencies": {},
   "devDependencies": {},
   "repository": {
     "type": "git",
