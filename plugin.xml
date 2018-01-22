@@ -5,7 +5,6 @@
     <description>Account Manager cordova plugin for android and keychain for iOS</description>
     <license>Apache 2.0</license>
     <keywords>cordova,accountmanager,android,plugin</keywords>
-    <dependency id="cordova-lib" version="7.0.1" />
 
     <js-module src="www/AccountManager.js" name="AccountManager">
         <clobbers target="window.AccountManager" />
