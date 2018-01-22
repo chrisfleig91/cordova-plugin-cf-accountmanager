@@ -10,9 +10,7 @@
     ]
   },
   "dependencies": {},
-  "devDependencies": {
-    "cordova-common": "2.2.1"
-  },
+  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/chrisfleig91/cordova-plugin-cf-accountmanager.git"
