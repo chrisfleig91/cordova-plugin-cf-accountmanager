@@ -19,7 +19,7 @@ under the License.
 
 # cordova-plugin-cf-accountmanager
 
-This cordova plugin enables you to use Android Account Manager and iOS Keychain to manage accounts of one user and share with other applications of the same company (e.g google apps like gmail, youtube, etc).
+This cordova plugin enables you to use Android Account Manager to manage accounts of one user and share with other applications of the same company (e.g google apps like gmail, youtube, etc).
 
 It's possible to moddify this plugins to allow multiple accounts.
 
@@ -42,12 +42,11 @@ You need to add the following settings in your config.xml file for Android Accou
 ## Supported Platforms
 
 - Android
-- iOS
 
 ## Methods
 
 - registerAccount: register an user in Account Manager
-- removeAccount: remove an account from Account Manager (Android) and remove all data from keychain (iOS)
+- removeAccount: remove an account from Account Manager (Android)
 - getUserAccount: returns an String with account name if account exist
 - getPassword: returns password if account exist
 - getDataFromKey: returns data from specified key
@@ -58,7 +57,6 @@ You need to add the following settings in your config.xml file for Android Accou
 ## Key Parameters
 
 - accountType: the same account type unique identifier set in config.xml file
-- group (Nullable): group identifier. Only for iOS shared keychain
 - data: key-value object
 
 ## Notes

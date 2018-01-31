@@ -1,12 +1,11 @@
 {
   "name": "cordova-plugin-cf-accountmanager",
   "version": "1.0.0",
-  "description": "Account Manager cordova plugin for android and keychain for iOS",
+  "description": "Account Manager cordova plugin for android",
   "cordova": {
     "id": "cordova-plugin-cf-accountmanager",
     "platforms": [
-      "android",
-      "ios"
+      "android"
     ]
   },
   "dependencies": {},
@@ -21,10 +20,9 @@
     "android",
     "plugin",
     "ecosystem:cordova",
-    "cordova-android",
-    "cordova-ios"
+    "cordova-android"
   ],
-  "author": "Daniel Valenzuela",
+  "author": "Christoph Fleig",
   "license": "Apache 2.0",
   "bugs": {
     "url": "https://github.com/chrisfleig91/cordova-plugin-cf-accountmanager/issues"

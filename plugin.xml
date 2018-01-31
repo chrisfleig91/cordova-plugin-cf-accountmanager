@@ -2,7 +2,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         id="cordova-plugin-cf-accountmanager" version="1.0.0">
     <name>AccountManagerPlugin</name>
-    <description>Account Manager cordova plugin for android and keychain for iOS</description>
+    <description>Account Manager cordova plugin for android</description>
     <license>Apache 2.0</license>
     <keywords>cordova,accountmanager,android,plugin</keywords>
 
@@ -48,21 +48,5 @@
         <hook type="before_build" src="hooks/after_plugin_install/001_account_manager_settings.js" />
         <hook type="before_start" src="hooks/after_plugin_install/001_account_manager_settings.js" />
         
-    </platform>
-
-    <platform name="ios">
-        <config-file target="config.xml" parent="/*">
-            <feature name="AccountManagerPlugin">
-                <param name="ios-package" value="AccountManagerPlugin"/>
-            </feature>
-        </config-file>
-        <header-file src="src/ios/KeychainWrapper.h" />
-        <source-file src="src/ios/KeychainWrapper.m" />
-        <header-file src="src/ios/AccountManagerPlugin.h" />
-        <source-file src="src/ios/AccountManagerPlugin.m" />
-        
-        <framework src="Security.framework" />
-        <framework src="Foundation.framework"/>
-        <framework src="LocalAuthentication.framework"/>
     </platform>
 </plugin>
