@@ -17,7 +17,7 @@ specific language governing permissions and limitations
 under the License.
 -->
 
-# cordova-plugin-kunder-accountmanager
+# cordova-plugin-cf-accountmanager
 
 This cordova plugin enables you to use Android Account Manager and iOS Keychain to manage accounts of one user and share with other applications of the same company (e.g google apps like gmail, youtube, etc).
 
@@ -26,7 +26,7 @@ It's possible to moddify this plugins to allow multiple accounts.
 ## Installation
 
 ```
-cordova plugin add https://github.com/daniel4thsource/cordova-plugin-kunder-accountmanager
+cordova plugin add https://github.com/chrisfleig91/cordova-plugin-cf-accountmanager
 ```
 
 ## Account Manager settings
