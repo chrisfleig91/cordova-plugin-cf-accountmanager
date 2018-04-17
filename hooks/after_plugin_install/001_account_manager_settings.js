@@ -4,7 +4,6 @@
 var fs = require('fs');
 
 module.exports = function(context) {
-
 	var cordova_util = context.requireCordovaModule('cordova-lib/src/cordova/util'),
 	ConfigParser = context.requireCordovaModule('cordova-lib').configparser,
 	projectRoot = cordova_util.isCordova(),
@@ -14,7 +13,10 @@ module.exports = function(context) {
 	iconUrl = cfg.getPreference('AccountManagerIconUrl'),
 	accountType = cfg.getPreference('AccountManagerType');
 
-	fs.writeFileSync('platforms/android/res/drawable/acm_icon.png', fs.readFileSync(iconUrl));
+	var configFile = fs.readFileSync('config.xml', 'utf-8');
+	var preferenceTags = '</platform>\r\n<preference name="AccountManagerLabel" value="NexusAccountType" />\r\n<preference name="AccountManagerIconUrl" value="platforms\\android\\res\\drawable\\acm_icon.png" />\r\n<preference name="AccountManagerType" value="NexusAccountType" />'
+	configFile.replace('</platform>', preferenceTags);
+	fs.writeFileSync('config.xml', configFile);
 
 	var authenticatorFile = fs.readFileSync('platforms/android/res/xml/authenticator.xml','utf8');
 	authenticatorFile = authenticatorFile.replace(/android:icon="[ \S]*"/i, 'android:icon="@drawable/acm_icon"');
