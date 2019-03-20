@@ -25,8 +25,8 @@ module.exports = function(context) {
 	fs.writeFileSync('platforms/android/res/xml/authenticator.xml', authenticatorFile);
 
 	var stringFile = fs.readFileSync('platforms/android/res/values/strings.xml','utf8');
-	if(stringFile.indexOf('<string name="authLabel">') > -1){
-		stringFile = stringFile.replace(/\<string name\=\"authLabel\"\>[ \S]*\<\/string\>/i, '<string name="authLabel">'+label+'</string>');
+	if(stringFile.indexOf('<string name="authLabel" />') > -1){
+		stringFile = stringFile.replace(/\<string name\=\"authLabel\"\ \/>[ \S]*\<\/string\>/i, '<string name="authLabel">'+label+'</string>');
 	}
 	else{
 		stringFile = stringFile.replace('</resources>', '<string name="authLabel">'+label+'</string></resources>');
