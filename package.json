@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-cf-accountmanager",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Account Manager cordova plugin for android",
   "cordova": {
     "id": "cordova-plugin-cf-accountmanager",
