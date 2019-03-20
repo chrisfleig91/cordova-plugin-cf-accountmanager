@@ -26,7 +26,7 @@ module.exports = function(context) {
 
 	var stringFile = fs.readFileSync('platforms/android/res/values/strings.xml','utf8');
 	if(stringFile.indexOf('<string name="authLabel" />') > -1){
-		stringFile = stringFile.replace(/\<string name\=\"authLabel\"\ \/>[ \S]*\<\/string\>/i, '<string name="authLabel">'+label+'</string>');
+		stringFile = stringFile.replace('<string name="authLabel" />', '<string name="authLabel">'+label+'</string>');
 	}
 	else{
 		stringFile = stringFile.replace('</resources>', '<string name="authLabel">'+label+'</string></resources>');
