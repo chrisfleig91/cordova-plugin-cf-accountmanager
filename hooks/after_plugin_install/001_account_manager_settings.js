@@ -24,11 +24,17 @@ module.exports = function(context) {
 	authenticatorFile = authenticatorFile.replace(/android:accountType="[ \S]*"/i, 'android:accountType="'+accountType+'"');
 	fs.writeFileSync('platforms/android/res/xml/authenticator.xml', authenticatorFile);
 
+	var RegexAuthLabelEmpty = RegExp('<string name="authLabel" />', 'gmi')
+	var RegexAuthLabelExists = RegExp(`<string name="authLabel">${label}</string>`, 'gmi')
+
 	var stringFile = fs.readFileSync('platforms/android/res/values/strings.xml','utf8');
-	if(stringFile.indexOf('<string name="authLabel" />') > -1){
+	if(RegexAuthLabelEmpty.test(stringFile)) {
 		stringFile = stringFile.replace('<string name="authLabel" />', '<string name="authLabel">'+label+'</string>');
 	}
-	else{
+	else if (RegexAuthLabelExists.test(stringFile)) {
+		stringFile = stringFile;
+	}
+	else {
 		stringFile = stringFile.replace('</resources>', '<string name="authLabel">'+label+'</string></resources>');
 	}
 	
